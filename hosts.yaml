@@ -1,0 +1,7 @@
+---
+  st1.cmh:
+    hostname: 11.0.0.2
+    port: 22
+    username: cisco
+    password: cisco
+    platform: ios

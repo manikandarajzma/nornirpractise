@@ -1,0 +1,4 @@
+---
+defaults:
+    nornir_username: 'admin'
+    nornir_password: 'cisco'
