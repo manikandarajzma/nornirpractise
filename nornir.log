@@ -1,1 +1,64 @@
 2019-04-05 12:42:04,742 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 1 hosts
+2019-04-05 15:36:47,111 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 2 hosts
+2019-04-05 15:36:48,199 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 858, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 362, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 11.0.0.3
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 228, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 312, in __init__
+    self.establish_connection()
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 864, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 11.0.0.3:22
+
+2019-04-05 15:44:49,699 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 2 hosts
+2019-04-05 16:01:25,644 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 2 hosts
+2019-04-06 10:42:51,173 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 2 hosts
+2019-04-06 10:42:52,245 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 858, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\paramiko\client.py", line 362, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 11.0.0.3
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\ssh_dispatcher.py", line 228, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 312, in __init__
+    self.establish_connection()
+  File "C:\Users\manik\AppData\Local\Programs\Python\Python37\lib\site-packages\netmiko\base_connection.py", line 864, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 11.0.0.3:22
+
+2019-04-06 10:45:22,730 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 2 hosts
