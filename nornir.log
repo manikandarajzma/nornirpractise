@@ -2294,3 +2294,159 @@ Traceback (most recent call last):
 nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
 
 
+2019-04-06 15:54:22,801 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 15:54:35,952 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 15:54:35,952 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 15:54:35,953 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 15:54:35,953 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 16:03:34,030 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 16:03:34,045 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 16:03:34,046 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 16:03:34,046 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 16:03:34,046 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+

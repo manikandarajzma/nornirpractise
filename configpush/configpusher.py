@@ -3,6 +3,7 @@ from nornir.plugins.tasks.data import load_yaml
 from nornir.plugins.tasks.text import template_file
 from nornir.plugins.tasks.networking import netmiko_send_config
 from nornir.plugins.functions.text import print_result
+from nornir.core.inventory import ConnectionOptions
 
 def load_data(task):
     data = task.run(
@@ -19,7 +20,8 @@ def load_data(task):
 
 
 nr = InitNornir()
-
+nr.inventory.defaults.connection_options = ConnectionOptions(extras={"secret": "cisco"})
 routers = nr.filter(platform='cisco_ios')
+
 r = routers.run(load_data)
 print_result(r)
