@@ -5,10 +5,10 @@ defaults:
 
 India:
     data:
-        username: cisco
+        site: India
 
 USA:
     data:
-        username: cisco
+        site: USA
 
    

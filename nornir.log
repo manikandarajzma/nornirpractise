@@ -72,3 +72,2225 @@ netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: c
 2019-04-06 11:55:09,940 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 2 hosts
 2019-04-06 12:10:09,344 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 2 hosts
 2019-04-06 12:12:57,727 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show arp'} on 2 hosts
+2019-04-06 12:44:29,140 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 12:44:29,146 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 9, in load_data
+    file=f'{task.host["site"]}.yaml'
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'site'
+
+2019-04-06 12:44:29,147 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 9, in load_data
+    file=f'{task.host["site"]}.yaml'
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'site'
+
+2019-04-06 12:46:34,587 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 12:46:34,594 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 9, in load_data
+    file=f'{task.host["site"]}.yaml'
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'site'
+
+2019-04-06 12:46:34,594 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 9, in load_data
+    file=f'{task.host["site"]}.yaml'
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 150, in __getitem__
+    return self.data[item]
+KeyError: 'site'
+
+2019-04-06 12:49:32,699 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:13:17,859 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:13:28,278 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:15:21,072 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:15:21,083 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 17, in render_from_file
+    t = env.get_template(template)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\loaders.py", line 187, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: router.j2
+
+2019-04-06 13:15:21,084 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 17, in render_from_file
+    t = env.get_template(template)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\loaders.py", line 187, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: router.j2
+
+2019-04-06 13:15:21,084 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 16, in load_data
+    r = task.run(task=template_file, template="router.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:15:21,085 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 16, in load_data
+    r = task.run(task=template_file, template="router.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:15:52,601 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:15:52,622 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:15:52,623 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:15:52,623 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 16, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:15:52,624 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 16, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:19:34,459 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:19:34,474 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:19:34,475 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:19:34,475 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 16, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:19:34,476 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 16, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:19:54,068 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:26:36,557 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:26:36,573 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:26:36,573 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:26:36,574 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 16, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:26:36,574 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 16, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:33:55,460 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:33:55,476 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:33:55,476 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:33:55,477 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:33:55,477 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:37:23,506 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:37:23,521 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:37:23,522 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:37:23,522 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:37:23,523 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:37:39,087 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:37:39,104 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:37:39,104 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:37:39,105 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:37:39,105 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:38:09,384 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:38:09,398 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:38:09,399 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'asn' is undefined
+
+2019-04-06 13:38:09,399 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:38:09,399 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:42:51,045 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:42:51,071 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'loopback0' is undefined
+
+2019-04-06 13:42:51,072 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ loopback0 }}
+jinja2.exceptions.UndefinedError: 'loopback0' is undefined
+
+2019-04-06 13:42:51,072 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:42:51,072 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:43:18,669 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:43:18,686 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ host.loopback0 }}
+jinja2.exceptions.UndefinedError: 'nornir.core.inventory.Host object' has no attribute 'loopback0'
+
+2019-04-06 13:43:18,686 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ host.loopback0 }}
+jinja2.exceptions.UndefinedError: 'nornir.core.inventory.Host object' has no attribute 'loopback0'
+
+2019-04-06 13:43:18,687 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:43:18,687 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:44:25,460 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:44:25,475 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ data.loopback0 }}
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+
+2019-04-06 13:44:25,476 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ data.loopback0 }}
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'data' is undefined
+
+2019-04-06 13:44:25,476 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:44:25,476 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:44:40,721 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:44:40,738 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ host.data.loopback0 }}
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'loopback0'
+
+2019-04-06 13:44:40,739 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 2, in top-level template code
+    bgp router-id {{ host.data.loopback0 }}
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'loopback0'
+
+2019-04-06 13:44:40,739 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:44:40,739 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:45:09,472 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:45:09,489 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 4, in top-level template code
+    {% for n in networks %}
+jinja2.exceptions.UndefinedError: 'networks' is undefined
+
+2019-04-06 13:45:09,489 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\text\template_file.py", line 35, in template_file
+    **kwargs
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\helpers\jinja_helper.py", line 18, in render_from_file
+    return t.render(**kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "bgp.j2", line 4, in top-level template code
+    {% for n in networks %}
+jinja2.exceptions.UndefinedError: 'networks' is undefined
+
+2019-04-06 13:45:09,490 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:45:09,491 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 15, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-06 13:45:45,743 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:45:58,900 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 13:45:58,901 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 13:45:58,901 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 13:45:58,901 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 13:51:18,240 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:51:31,386 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 13:51:31,387 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 13:51:31,396 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 13:51:31,396 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 13:56:23,534 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:56:36,693 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\napalm.py", line 51, in open
+    connection.open()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\ios\ios.py", line 151, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\base\base.py", line 93, in _netmiko_open
+    self._netmiko_device.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 13:56:36,693 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\napalm.py", line 51, in open
+    connection.open()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\ios\ios.py", line 151, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\base\base.py", line 93, in _netmiko_open
+    self._netmiko_device.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 13:56:36,694 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-06 13:56:36,694 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-06 13:57:03,930 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 13:57:17,069 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\napalm.py", line 51, in open
+    connection.open()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\ios\ios.py", line 151, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\base\base.py", line 93, in _netmiko_open
+    self._netmiko_device.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 13:57:17,069 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-06 13:57:17,076 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\napalm.py", line 51, in open
+    connection.open()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\ios\ios.py", line 151, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\base\base.py", line 93, in _netmiko_open
+    self._netmiko_device.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 13:57:17,076 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-06 14:02:13,091 -  nornir.core -  WARNING -        run() - Task 'load_data' has not been run – 0 hosts selected
+2019-04-06 14:03:00,752 -  nornir.core -  WARNING -        run() - Task 'load_data' has not been run – 0 hosts selected
+2019-04-06 14:04:40,371 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:04:40,392 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\base\__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2019-04-06 14:04:40,393 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\base\__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2019-04-06 14:04:40,393 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-06 14:04:40,394 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-06 14:06:08,745 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:06:08,762 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\base\__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2019-04-06 14:06:08,762 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\napalm.py", line 49, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\napalm\base\__init__.py", line 105, in get_network_driver
+    install_name=name
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2019-04-06 14:06:08,763 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-06 14:06:08,763 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-06 14:06:35,772 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:06:48,929 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 14:06:48,930 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 14:06:48,930 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:06:48,931 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:26:23,742 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:26:36,905 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 14:26:36,905 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:26:36,915 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 14:26:36,915 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:28:03,850 -  nornir.core -  WARNING -        run() - Task 'load_data' has not been run – 0 hosts selected
+2019-04-06 14:28:24,997 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:28:25,012 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 14:28:25,012 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 14:28:25,013 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:28:25,013 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:32:11,267 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:32:11,281 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\ssh_dispatcher.py", line 228, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'optional_args'
+
+2019-04-06 14:32:11,281 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\connections\netmiko.py", line 58, in open
+    self.connection = ConnectHandler(**parameters)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\ssh_dispatcher.py", line 228, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'optional_args'
+
+2019-04-06 14:32:11,282 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:32:11,282 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:46:20,005 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:46:20,018 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 14:46:20,019 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 14:46:20,019 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:46:20,019 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:56:18,641 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:56:18,654 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 14:56:18,654 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 14:56:18,655 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:56:18,655 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:56:50,066 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 14:56:50,080 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 14:56:50,080 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 24, in netmiko_send_config
+    net_connect = task.host.get_connection("netmiko", task.nornir.config)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-06 14:56:50,080 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 14:56:50,081 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 15:00:52,945 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 15:01:06,095 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 15:01:06,095 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 15:01:06,096 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 15:01:06,096 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 15:02:01,704 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 15:02:14,850 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 15:02:14,850 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 15:02:14,851 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 15:02:14,851 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 15:39:56,015 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-06 15:40:09,175 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 15:40:09,176 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 699, in recv
+    out = self.in_buffer.read(nbytes, self.timeout)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\buffered_pipe.py", line 164, in read
+    raise PipeTimeout()
+paramiko.buffered_pipe.PipeTimeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 519, in _read_channel_expect
+    new_data = self.remote_conn.recv(MAX_BUFFER)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\paramiko\channel.py", line 701, in recv
+    raise socket.timeout()
+socket.timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1413, in enable
+    output += self.read_until_prompt()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 590, in read_until_prompt
+    return self._read_channel_expect(*args, **kwargs)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 528, in _read_channel_expect
+    "Timed-out reading channel, data not available."
+netmiko.ssh_exception.NetMikoTimeoutException: Timed-out reading channel, data not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\plugins\tasks\networking\netmiko_send_config.py", line 25, in netmiko_send_config
+    net_connect.enable()
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\cisco_base_connection.py", line 22, in enable
+    cmd=cmd, pattern=pattern, re_flags=re_flags
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\netmiko\base_connection.py", line 1415, in enable
+    raise ValueError(msg)
+ValueError: Failed to enter enable mode. Please ensure you pass the 'secret' argument to ConnectHandler.
+
+2019-04-06 15:40:09,176 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
+2019-04-06 15:40:09,176 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=netmiko_send_config, configuration=task.host["template_config"])
+  File "C:\Users\manik\Documents\automation\Python\nornirpractise\nornirpractise\nornirpractise\lib\site-packages\nornir\core\task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netmiko_send_config (failed)
+
+
