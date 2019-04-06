@@ -2,3 +2,13 @@
 defaults:
     username: 'cisco'
     password: 'cisco'
+
+India:
+    data:
+        asn: 65000
+
+USA:
+    data:
+        asn: 65001
+
+   
