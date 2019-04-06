@@ -5,10 +5,10 @@ defaults:
 
 India:
     data:
-        asn: 65000
+        username: cisco
 
 USA:
     data:
-        asn: 65001
+        username: cisco
 
    
