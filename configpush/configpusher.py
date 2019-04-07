@@ -17,7 +17,7 @@ def load_data(task):
     task.run(task=napalm_configure, configuration=task.host["template_config"])
 
 
-
+#change variable names
 nr = InitNornir()
 routers = nr.filter(platform='ios')
 

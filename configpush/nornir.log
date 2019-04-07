@@ -1,0 +1,311 @@
+2019-04-07 01:54:21,397 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 01:54:21,401 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_yaml' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/data/load_yaml.py", line 24, in load_yaml
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'India.yaml'
+
+2019-04-07 01:54:21,401 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 10, in load_data
+    file=f'{task.host["site"]}.yaml'
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: load_yaml (failed)
+
+
+2019-04-07 01:54:21,401 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_yaml' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/data/load_yaml.py", line 24, in load_yaml
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'USA.yaml'
+
+2019-04-07 01:54:21,401 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 10, in load_data
+    file=f'{task.host["site"]}.yaml'
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: load_yaml (failed)
+
+
+2019-04-07 02:18:24,481 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 02:19:35,028 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 02:19:38,042 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 858, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/paramiko/client.py", line 362, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 11.0.0.3
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/base/base.py", line 87, in _netmiko_open
+    **netmiko_optional_args
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 228, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 312, in __init__
+    self.establish_connection()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 864, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 11.0.0.3:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 151, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/base/base.py", line 90, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 11.0.0.3
+
+2019-04-07 02:19:38,045 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 02:19:38,045 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 858, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/paramiko/client.py", line 362, in connect
+    raise NoValidConnectionsError(errors)
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 11.0.0.2
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/base/base.py", line 87, in _netmiko_open
+    **netmiko_optional_args
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/ssh_dispatcher.py", line 228, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 312, in __init__
+    self.establish_connection()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/base_connection.py", line 864, in establish_connection
+    raise NetMikoTimeoutException(msg)
+netmiko.ssh_exception.NetMikoTimeoutException: Connection to device timed-out: cisco_ios 11.0.0.2:22
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 51, in open
+    connection.open()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 151, in open
+    device_type, netmiko_optional_args=self.netmiko_optional_args
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/base/base.py", line 90, in _netmiko_open
+    raise ConnectionException("Cannot connect to {}".format(self.hostname))
+napalm.base.exceptions.ConnectionException: Cannot connect to 11.0.0.2
+
+2019-04-07 02:19:38,046 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 02:20:54,710 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 02:21:17,008 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 531, in commit_config
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+
+router bgp 66801
+               ^
+% Invalid input detected at '^' marker.
+
+ bgp router-id 2.2.2.2
+  ^
+% Invalid input detected at '^' marker.
+
+ address-family ipv4 unicast
+  ^
+% Invalid input detected at '^' marker.
+
+  network 192.168.23.0 255.255.255.0
+         ^
+% Invalid input detected at '^' marker.
+
+  network 192.168.24.0 255.255.255.0
+         ^
+% Invalid input detected at '^' marker.
+
+  network 192.168.38.0 255.255.255.0
+         ^
+% Invalid input detected at '^' marker.
+
+180 bytes copied in 0.024 secs (7500 bytes/sec)
+
+2019-04-07 02:21:17,009 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 02:21:17,209 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 531, in commit_config
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+
+router bgp 66401
+               ^
+% Invalid input detected at '^' marker.
+
+ bgp router-id 1.1.1.1
+  ^
+% Invalid input detected at '^' marker.
+
+ address-family ipv4 unicast
+  ^
+% Invalid input detected at '^' marker.
+
+  network 10.12.0.0 255.255.0.0
+         ^
+% Invalid input detected at '^' marker.
+
+  network 10.16.0.0 255.255.0.0
+         ^
+% Invalid input detected at '^' marker.
+
+  network 10.192.25.0 255.255.255.0
+         ^
+% Invalid input detected at '^' marker.
+
+169 bytes copied in 0.020 secs (8450 bytes/sec)
+
+2019-04-07 02:21:17,209 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 02:25:37,023 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 02:26:03,404 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 531, in commit_config
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+
+  network 192.168.23.0 255.255.255.0
+                       ^
+% Invalid input detected at '^' marker.
+
+  network 192.168.24.0 255.255.255.0
+                       ^
+% Invalid input detected at '^' marker.
+
+  network 192.168.38.0 255.255.255.0
+                       ^
+% Invalid input detected at '^' marker.
+
+179 bytes copied in 0.040 secs (4475 bytes/sec)
+
+2019-04-07 02:26:03,406 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 02:26:03,614 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 37, in napalm_configure
+    device.commit_config()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 531, in commit_config
+    raise MergeConfigException(merge_error)
+napalm.base.exceptions.MergeConfigException: Configuration merge failed; automatic rollback attempted:
+
+  network 10.12.0.0 255.255.0.0
+                    ^
+% Invalid input detected at '^' marker.
+
+  network 10.16.0.0 255.255.0.0
+                    ^
+% Invalid input detected at '^' marker.
+
+  network 10.192.25.0 255.255.255.0
+                      ^
+% Invalid input detected at '^' marker.
+
+168 bytes copied in 0.036 secs (4667 bytes/sec)
+
+2019-04-07 02:26:03,614 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 17, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 02:28:27,294 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 02:45:50,227 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
