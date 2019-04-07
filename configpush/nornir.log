@@ -308,3 +308,4 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
 
 
 2019-04-07 02:28:27,294 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 02:45:50,227 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
