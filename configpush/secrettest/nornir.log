@@ -1,0 +1,828 @@
+2019-04-07 14:11:23,997 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:11:24,005 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/helpers/jinja_helper.py", line 17, in render_from_file
+    t = env.get_template(template)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/jinja2/loaders.py", line 187, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bgp.j2
+
+2019-04-07 14:11:24,006 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 20, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-07 14:11:24,006 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/text/template_file.py", line 35, in template_file
+    **kwargs
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/helpers/jinja_helper.py", line 17, in render_from_file
+    t = env.get_template(template)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/jinja2/loaders.py", line 187, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: bgp.j2
+
+2019-04-07 14:11:24,008 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 20, in load_data
+    r = task.run(task=template_file, template="bgp.j2", path="")
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2019-04-07 14:11:47,789 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:11:47,809 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:11:47,811 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:11:47,812 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:11:47,813 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:14:34,040 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:14:34,059 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:14:34,061 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:14:34,062 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:14:34,064 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:14:50,024 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:14:50,043 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:14:50,045 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:14:50,047 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:14:50,048 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:25:00,111 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:25:00,135 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:25:00,137 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:25:00,139 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:25:00,140 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:27:45,545 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:27:45,567 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:27:45,568 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:27:45,570 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:27:45,571 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:29:23,843 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:29:23,885 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:29:23,886 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:29:23,886 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 14:29:23,886 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:41:15,223 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:41:24,369 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:41:24,371 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:41:24,554 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:41:24,555 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:42:13,809 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:42:22,825 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:42:22,831 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:42:22,845 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:42:22,845 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:43:37,416 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:43:46,434 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:43:46,436 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:43:46,454 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:43:46,456 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:54:43,308 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:54:52,352 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:54:52,354 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:54:52,355 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:54:52,357 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:55:48,760 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:55:57,766 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:55:57,768 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:55:57,778 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:55:57,780 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:57:57,765 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 14:58:06,779 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:58:06,780 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 14:58:06,787 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 32, in napalm_configure
+    device.load_merge_candidate(filename=filename, config=configuration)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 301, in load_merge_candidate
+    file_system=self.dest_file_system,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 252, in _load_candidate_wrapper
+    source_file=tmp_file, dest_file=dest_file, file_system=file_system
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 606, in _scp_file
+    TransferClass=FileTransfer,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/napalm/ios/ios.py", line 674, in _xfer_file
+    transfer.transfer_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 304, in transfer_file
+    self.put_file()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 317, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/netmiko/scp_handler.py", line 40, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 158, in put
+    self._recv_confirm()
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/scp.py", line 363, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Privilege denied.
+
+
+2019-04-07 14:58:06,789 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "enabletest.py", line 22, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 15:01:53,099 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts

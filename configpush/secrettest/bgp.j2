@@ -1,0 +1,6 @@
+router bgp {{ host.asn }}
+ bgp router-id {{ host.data.loopback0 }}
+ address-family ipv4 unicast
+{% for n in host.networks %}
+  network {{ n.net }} mask {{ n.mask }}
+{% endfor %}

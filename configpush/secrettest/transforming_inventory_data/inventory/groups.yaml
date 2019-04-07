@@ -1,0 +1,14 @@
+---
+defaults:
+    username: 'cisco'
+    password: 'cisco'
+
+India:
+    data:
+        site: India
+
+USA:
+    data:
+        site: USA
+
+   
