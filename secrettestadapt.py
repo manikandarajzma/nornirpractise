@@ -1,3 +1,4 @@
+
 from nornir.core.inventory import ConnectionOptions
 
 def adapt_host_data(host):
@@ -12,3 +13,5 @@ def adapt_host_data(host):
             }
         }
     )
+
+    host.connection_options["napalm"] = ConnectionOptions(extras={"optional_args": {...})
