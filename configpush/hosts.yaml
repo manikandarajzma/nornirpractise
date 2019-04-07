@@ -1,0 +1,25 @@
+---
+  r1:
+    hostname: 11.0.0.2
+    port: 22
+    username: cisco
+    password: cisco
+    platform: ios
+    groups: 
+        - 'India'
+    data:
+      loopback0: 1.1.1.1
+
+      
+  r2:
+    hostname: 11.0.0.3
+    port: 22
+    username: cisco
+    password: cisco
+    platform: ios
+    groups: 
+      - 'USA'
+    data:
+      loopback0: 2.2.2.2
+
+
