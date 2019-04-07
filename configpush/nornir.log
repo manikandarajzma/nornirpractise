@@ -309,3 +309,258 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
 
 2019-04-07 02:28:27,294 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
 2019-04-07 02:45:50,227 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 12:06:26,006 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 12:06:26,039 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 12:06:26,041 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 12:06:26,041 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 12:06:26,043 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 12:08:02,940 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 12:08:02,964 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 12:08:02,966 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 12:08:02,968 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 12:08:02,969 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 12:24:16,164 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 12:24:16,186 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 12:24:16,188 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 12:24:16,189 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 12:24:16,189 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 18, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 13:20:28,118 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 13:20:28,138 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 13:20:28,139 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 19, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 13:20:28,140 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 302, in get_connection
+    extras=conn.extras,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 352, in open_connection
+    configuration=configuration,
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/connections/napalm.py", line 50, in open
+    connection = network_driver(**parameters)
+TypeError: __init__() got an unexpected keyword argument 'secret'
+
+2019-04-07 13:20:28,141 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 19, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 13:23:07,158 -  nornir.core -     INFO -        run() - Running task 'load_data' with args {} on 2 hosts
+2019-04-07 13:23:07,186 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-07 13:23:07,188 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_configure.py", line 27, in napalm_configure
+    device = task.host.get_connection("napalm", task.nornir.config)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 293, in get_connection
+    conn = self.get_connection_parameters(connection)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 227, in get_connection_parameters
+    r = self._get_connection_options_recursively(connection)
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/inventory.py", line 265, in _get_connection_options_recursively
+    sp = self.defaults.connection_options.get(connection, None)
+AttributeError: 'ConnectionOptions' object has no attribute 'get'
+
+2019-04-07 13:23:07,192 - nornir.core.task -    ERROR -      start() - Host 'r1': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 19, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2019-04-07 13:23:07,192 - nornir.core.task -    ERROR -      start() - Host 'r2': task 'load_data' failed with traceback:
+Traceback (most recent call last):
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 67, in start
+    r = self.task(self, **self.params)
+  File "configpusher.py", line 19, in load_data
+    task.run(task=napalm_configure, configuration=task.host["template_config"])
+  File "/home/osboxes/python/nornirpractise/env/local/lib/python3.6/site-packages/nornir/core/task.py", line 124, in run
+    raise NornirSubTaskError(task=task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+

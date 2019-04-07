@@ -1,4 +1,7 @@
 from nornir import InitNornir
+import pprint
+
+from nornir import InitNornir
 from nornir.plugins.tasks.data import load_yaml
 from nornir.plugins.tasks.text import template_file
 from nornir.plugins.tasks.networking import napalm_configure
@@ -20,8 +23,14 @@ def load_data(task):
 
 
 
-nr = InitNornir()
+nr = InitNornir(config_file="transforming_inventory_data/config.yaml")
 routers = nr.filter(platform='ios')
 
 r = routers.run(load_data)
 print_result(r)
+
+# nr = InitNornir(
+#     config_file="transforming_inventory_data/config.yaml",
+# )
+# for name, host in nr.inventory.hosts.items():
+#     print(host.connection_options["napalm"])
